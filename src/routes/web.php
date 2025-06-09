@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// トップページは商品一覧画面とする
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('products.index');
 });
+
+Route::resource('products', ProductController::class);

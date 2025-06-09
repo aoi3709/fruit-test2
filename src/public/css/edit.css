@@ -1,0 +1,251 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #ff9900;
+}
+
+.header {
+    background-color: #fff;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__inner {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.product-edit-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.product-edit-card {
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.product-image-section {
+    flex: 0 0 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-detail-image {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+}
+
+.file-upload-area {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 280px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.file-select-button {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-right: 1px solid #ccc;
+    white-space: nowrap;
+}
+
+.file-name {
+    flex-grow: 1;
+    padding: 10px 10px;
+    font-size: 0.9rem;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.product-info-section {
+    flex-grow: 1;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-input,
+.form-textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.checkbox-group {
+    display: flex;
+    gap: 20px;
+}
+
+
+.checkbox-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.form-buttons {
+    margin-top: 30px;
+    display: flex;
+    /* justify-content: flex-end; */
+    gap: 15px;
+}
+
+.button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.back-button {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.back-button:hover {
+    background-color: #d0d0d0;
+}
+
+.save-button {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.save-button:hover {
+    background-color: #e0a800;
+}
+
+.delete-form {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22white%22%3E%3Cpath%20d%3D%22M6%2019c0%201.1.9%202%202%202h8c1.1%200%202-.9%202-2V7H6v12zM19%204h-3.5L14%202H10L8.5%204H5v2h14V4z%22/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    padding: 0;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+.text-danger {
+    color: #dc3545;
+    font-size: 0.875em;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .product-edit-card {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .product-image-section {
+        flex: none;
+        width: 100%;
+    }
+
+    .file-upload-area {
+        max-width: 100%;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    .delete-form {
+        text-align: center;
+    }
+}
